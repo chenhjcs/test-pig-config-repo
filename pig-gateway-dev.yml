@@ -21,7 +21,8 @@ zuul:
       serviceId: pig-config
       stripPrefix: true
       sensitiveHeaders:
-      
+
+
 server:
   port: 9999
 logging:
