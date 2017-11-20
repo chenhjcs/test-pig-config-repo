@@ -16,6 +16,12 @@ zuul:
     connect-timeout-millis: 20000
     socket-timeout-millis: 20000
   routes:
+    http://198.87.148.43:2000/pig-gateway/dev
+    auth-service:
+      path: /test/**
+      serviceId: pig-config
+      stripPrefix: true
+      sensitiveHeaders:
     auth-service:
       path: /auth/**
       serviceId: pig-auth-service
