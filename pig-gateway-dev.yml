@@ -17,24 +17,10 @@ zuul:
     socket-timeout-millis: 20000
   routes:
     auth-service:
-      path: /auth/**
-      serviceId: pig-auth-service
+      path: /test/**
+      serviceId: pig-config
       stripPrefix: true
       sensitiveHeaders:
-    demo-service:
-      path: /admin/**
-      serviceId: pig-admin-service
-      stripPrefix: true
-      sensitiveHeaders:
-
-security:
-  sessions: stateless
-  oauth2:
-    resource:
-      loadBalanced: true
-      user-info-uri: http://pig-auth-service/user
-      prefer-token-info: false
-      service-id: pig-gateway
       
 server:
   port: 9999
